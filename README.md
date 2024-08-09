@@ -5,3 +5,9 @@ A tiny project that explore to grasp low-level implementation of fundamental dat
 ### List of data structures to implement:
 - [x] Set
 - [ ] Queue
+- [ ] Map/Dictionary
+- [ ] LinkedList
+- [ ] Tree
+- [ ] Stack
+- [ ] Heap
+- [ ] Graph
