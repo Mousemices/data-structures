@@ -1,6 +1,10 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Set<T> {
+import Iterator.SetIterator;
+
+
+public class Set<T> implements Iterable<T> {
     private final ArrayList<T> elements;
 
     public Set() {
@@ -8,8 +12,11 @@ public class Set<T> {
     }
 
     public boolean add(T element) {
-        boolean duplicated = false;
+        /*if(!this.contains(element)) {
+            this.elements.add(element);
+        }*/
 
+        boolean duplicated = false;
         int index = 0;
 
         while (!duplicated && index < this.elements.size()) {
@@ -36,6 +43,10 @@ public class Set<T> {
         return this.elements.remove(element);
     }
 
+    public boolean contains(T element) {
+        return this.elements.contains(element);
+    }
+
     public int size() {
         return this.elements.size();
     }
@@ -50,5 +61,18 @@ public class Set<T> {
 
     public void clear() {
         this.elements.clear();
+    }
+
+    public T[] toArray(T[] array) {
+        return this.elements.toArray(array);
+    }
+
+    public Object[] toArray() {
+        return this.elements.toArray();
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new SetIterator<>(elements);
     }
 }

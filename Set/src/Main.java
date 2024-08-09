@@ -7,6 +7,10 @@ public class Main {
         set.add("Star");
         set.add("Sun");
 
-        System.out.println(set.size());
+        for (String planet : set) {
+            System.out.println(planet);
+        }
+
+        System.out.println("Total elements: " + set.size());
     }
 }
